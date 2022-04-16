@@ -1,0 +1,195 @@
+.container{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.VideoPlayer{
+   position: relative;
+   border:1px solid red;
+   width: 50%;
+   height: 500px;
+}
+
+.Video{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Controller{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    border:1px solid green;
+}
+
+.actions-box{
+    border:1px solid red;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.timer input{
+    width: 100%;
+}
+
+
+/* #videoTimer{
+
+} */
+
+
+
+  #videoVolume{
+    display: none;
+}
+
+.volumeBox{
+    width:fit-content;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volumeBox:hover #videoVolume{
+    display: inline-block;
+   
+}
+
+
+#videoTimer , #videoVolume{
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    /* width: 100%; Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  #videoTimer::-webkit-slider-thumb, #videoVolume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  #videoTimer:focus , #videoVolume:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  #videoTimer::-ms-track , #videoVolume::-ms-track{
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+
+  /* Special styling for WebKit/Blink */
+  #videoTimer::-webkit-slider-thumb, #videoVolume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* border: 1px solid #000000; */
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -3px ;/*       You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 4px #000000, 0px 0px 4px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+  
+  /* All the same stuff for Firefox */
+  #videoTimer::-moz-range-thumb,  #videoVolume::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    /* border: 1px solid #000000; */
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  #videoTimer::-ms-thumb,  #videoVolume::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    /* border: 1px solid #000000; */
+    height: 10px;
+    width: 10px;
+    border-radius:50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+
+  /* Track */
+
+
+
+  #videoTimer::-webkit-slider-runnable-track , 
+  #videoVolume::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+    background: #fff;
+    border-radius: 2px;
+    /* border: 0.2px solid #010101; */
+  }
+
+  #videoTimer:focus::-webkit-slider-runnable-track, #videoVolume:focus::-webkit-slider-runnable-track {
+    background: #fff;
+  }
+  
+ #videoTimer::-moz-range-track, #videoVolume::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+    background: #fff;
+    border-radius: 1.3px;
+    /* border: 0.2px solid #010101; */
+  }
+  
+  #videoTimer::-ms-track, #videoVolume::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  #videoTimer::-ms-fill-lower,  #videoVolume::-ms-fill-lower  {
+    background: #fff;
+    /* border: 0.2px solid #010101; */
+    border-radius: 2.6px;
+    /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  }
+  #videoTimer:focus::-ms-fill-lower, #videoVolume:focus::-ms-fill-lower {
+    background: #fff;
+  }
+  #videoTimer::-ms-fill-upper, #videoVolume::-ms-fill-upper  {
+    background: #fff;
+    /* border: 0.2px solid #010101; */
+    border-radius: 2.6px;
+    /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  }
+  #videoTimer:focus::-ms-fill-upper,#videoVolume:focus::-ms-fill-upper {
+    background: #fff;
+  }
+
+ 
+
+ 
